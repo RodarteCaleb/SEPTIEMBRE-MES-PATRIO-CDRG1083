@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Septiembre: Mes Patrio</title><style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden}
+body{font-family:Arial,Helvetica,sans-serif;background:#bdbdbd;color:#111}
+.page{position:relative;width:100vw;height:100vh;min-height:560px;overflow:hidden;background:#bdbdbd}
+.header{position:absolute;inset:0 0 auto 0;height:28.7%;background:url("header.png") center/100% 100% no-repeat;z-index:1}
+.side{position:absolute;left:0;top:44.5%;width:17.35%;z-index:15}
+.side a{display:flex;align-items:center;justify-content:center;height:7.55vh;min-height:45px;padding:3px 7px;background:#759d79;color:#fff;border:1px solid #fff;text-decoration:none;text-align:center;font-size:clamp(12px,1.18vw,18px);font-weight:900}
+.side a.active{background:#075b18}
+.side a:hover{background:#476f4e}
+.parrot{position:absolute;left:4.5%;top:27.8%;width:7.3%;height:16.4%;object-fit:contain;z-index:16}
+.dragon{position:absolute;right:-.1%;top:40.6%;width:17.9%;height:45%;object-fit:contain;z-index:16}
+.center{position:absolute;left:17.35%;top:34.15%;width:65.85%;height:56%;background:#fff;z-index:5;overflow:hidden}
+.content{position:relative;width:100%;height:100%;padding:2.4% 7.2% 1.2%}
+.ribbon{display:flex;align-items:center;justify-content:center;position:relative;width:43%;height:31px;margin:0 auto;border-radius:18px;background:#17672f;color:#fff;font-size:clamp(12px,1.28vw,18px);font-weight:900}
+.ribbon:before,.ribbon:after{content:"";position:absolute;top:2px;width:64px;height:27px;background:repeating-linear-gradient(135deg,transparent 0 7px,#e3292d 7px 12px,#fff 12px 18px)}
+.ribbon:before{right:104%;transform:scaleX(-1)}
+.ribbon:after{left:104%}
+.title{margin:8px 0 10px;text-align:left;padding-left:8%;color:#07552a;font-family:"Trebuchet MS",Arial,sans-serif;font-size:clamp(21px,2.05vw,30px);line-height:1;font-weight:900;white-space:nowrap}
+.intro{width:57%;min-height:88px;padding:10px 18px;background:#e2f0df;border:1px solid #d1e4cf;border-radius:6px;color:#222;font-size:clamp(9.5px,.88vw,13px);line-height:1.36;font-weight:600}
+.mainimg{position:absolute;right:2.5%;top:2.5%;width:40%;height:40%;object-fit:contain;background:#f4f4f4;border-radius:8px;padding:2px}
+.boxes{position:absolute;left:7.2%;right:7.2%;top:49%;height:39%;display:grid;grid-template-columns:1fr 1fr;gap:4.7%}
+.box{position:relative;padding:40px 26px 14px;border-radius:8px;text-align:center;display:flex;align-items:center;justify-content:center;font-family:"Roboto",Arial,sans-serif;font-size:clamp(12.5px,1.05vw,16.5px);line-height:1.45;font-weight:500}
+.box.green{background:#dfeee0;border:1px solid #c8ddc9}.box.pink{background:#fae5e5;border:1px solid #efbcbc}
+.label{position:absolute;left:8%;right:8%;top:-13px;min-height:31px;padding:5px 8px;border-radius:18px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:clamp(10px,1vw,15px);font-weight:900}
+.green .label{background:#236b37}.pink .label{background:#c92328}
+.back{position:absolute;left:7.2%;bottom:1.1%;display:flex;align-items:center;justify-content:center;width:105px;height:30px;border-radius:16px 5px 5px 16px;background:#17652f;color:#fff;text-decoration:none;font-size:12px;font-weight:900}
+.back:before{content:"←";font-size:19px;margin-right:7px}
+.footer{position:absolute;left:0;bottom:0;width:100%;height:10%;min-height:58px;background:#ef0505;color:#fff;z-index:40;display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(13px,1.28vw,20px);font-weight:900;line-height:1.35}
+
+.info-card{min-height:112px;height:112px;overflow:hidden}
+.info-card img{width:100%;height:112px;max-height:112px;object-fit:contain;display:block}
+</style>
+
+<style>
+.page-title {
+    position: absolute;
+    top: 7.5%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: clamp(38px, 5.3vw, 72px);
+    font-weight: 900;
+    line-height: 1.05;
+    text-shadow: 2px 2px #fff;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+</style>
+
+</head><body>
+<h1 class="page-title">SEPTIEMBRE: MES PATRIO</h1>
+
+<div class="page">
+<div class="header"></div>
+<img class="parrot" src="parrot.png" alt=""><img class="dragon" src="dragon.png" alt="">
+<nav class="side"><a class="" href="fechas.html">FECHAS IMPORTANTES</a><a class="active" href="personajes.html">PERSONAJES ILUSTRES</a><a class="" href="datos.html">DATOS CURIOSOS</a><a class="" href="mitos.html">MITOS</a></nav>
+<main class="center"><div class="content"><style>
+.cards4{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.info-card{position:relative;display:grid;grid-template-columns:34% 1fr;min-height:112px;background:#f4f1e3;border:1px solid #c9d3c4;border-radius:7px;overflow:hidden}
+.info-card img{width:100%;height:112px;max-height:112px;object-fit:contain;background:#e9eadf;display:block}
+.info-card .txt{padding:11px 13px;font-size:clamp(8.5px,.78vw,12px);line-height:1.28}
+.info-card b{display:block;font-size:clamp(10px,.88vw,14px);color:#145b2e;margin-bottom:5px}
+</style><div class="ribbon">PERSONAJES ILUSTRES</div><h1 class="title" style="text-align:center;padding-left:0">PERSONAJES ILUSTRES</h1><div class="cards4"><article class="info-card"><img src="miguel_hidalgo.jpg" alt="MIGUEL HIDALGO Y COSTILLA"><div class="txt"><b>MIGUEL HIDALGO Y COSTILLA</b>Sacerdote y líder del movimiento insurgente. Llamó al pueblo de Dolores a levantarse en armas el 16 de septiembre de 1810.</div></article><article class="info-card"><img src="jose_maria_morelos.jpg" alt="JOSÉ MARÍA MORELOS"><div class="txt"><b>JOSÉ MARÍA MORELOS</b>Sacerdote y estratega militar. Continuó la lucha de Hidalgo y sentó las bases de un México independiente.</div></article><article class="info-card"><img src="vicente_guerrero.jpg" alt="VICENTE GUERRERO"><div class="txt"><b>VICENTE GUERRERO</b>Militar y político. Luchó por la independencia y fue uno de los principales líderes del movimiento insurgente.</div></article><article class="info-card"><img src="agustin_iturbide.jpg" alt="AGUSTÍN DE ITURBIDE"><div class="txt"><b>AGUSTÍN DE ITURBIDE</b>Encabezó el Ejército Trigarante y logró la consumación de la Independencia de México en 1821.</div></article></div><a class="back" href="index.html">REGRESAR AL INICIO</a></div></main>
+<footer class="footer">RODARTE GONZALEZ CALEB DANIEL<br>GRUPO 5ºI<br> No.Control: 24308051281083</footer>
+</div></body></html>

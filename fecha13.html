@@ -2,16 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Esto ayuda a que la página se vea bien en diferentes pantallas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Septiembre: Mes Patrio</title>
 
     <style>
+        /* Quito los espacios que vienen por defecto para poder acomodar todo yo */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        /* Hago que la página ocupe toda la pantalla */
         html,
         body {
             width: 100%;
@@ -19,13 +24,14 @@
             overflow: hidden;
         }
 
+        /* Aquí pongo la letra y el color general */
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #bdbdbd;
             color: #111;
         }
 
-        /* Página */
+        /* Este es el espacio donde va todo el contenido */
         .page {
             position: relative;
             width: 100vw;
@@ -35,7 +41,7 @@
             background: #bdbdbd;
         }
 
-        /* Título principal */
+        /* Título que aparece hasta arriba */
         .page-title {
             position: absolute;
             top: 7.5%;
@@ -46,11 +52,13 @@
             font-size: clamp(38px, 5.3vw, 72px);
             font-weight: 900;
             line-height: 1.05;
+
+            /* Le pongo una sombra para que se vea mejor */
             text-shadow: 2px 2px #fff;
             z-index: 10;
         }
 
-        /* Encabezado */
+        /* Esta es la imagen que uso como encabezado */
         .header {
             position: absolute;
             top: 0;
@@ -61,7 +69,7 @@
             z-index: 1;
         }
 
-        /* Pestañas de fechas */
+        /* Estas son las pestañas para cambiar entre las fechas */
         .tabs {
             position: absolute;
             left: 13.65%;
@@ -73,6 +81,7 @@
             z-index: 30;
         }
 
+        /* Diseño de cada pestaña */
         .tabs a {
             display: flex;
             align-items: center;
@@ -85,12 +94,13 @@
             font-weight: 900;
         }
 
+        /* La fecha seleccionada se pone en verde */
         .tabs a.active,
         .tabs a:hover {
             background: #075b18;
         }
 
-        /* Menú lateral */
+        /* Menú que está en el lado izquierdo */
         .side {
             position: absolute;
             top: 44.5%;
@@ -99,6 +109,7 @@
             z-index: 15;
         }
 
+        /* Así se ven los botones del menú */
         .side a {
             display: flex;
             align-items: center;
@@ -115,15 +126,17 @@
             font-weight: 900;
         }
 
+        /* La sección en la que estoy queda marcada en verde oscuro */
         .side a.active {
             background: #075b18;
         }
 
+        /* Cuando paso el mouse cambia de tono */
         .side a:hover {
             background: #476f4e;
         }
 
-        /* Imágenes decorativas */
+        /* Dibujos que agregué para decorar la página */
         .parrot {
             position: absolute;
             left: 4.5%;
@@ -144,7 +157,7 @@
             z-index: 16;
         }
 
-        /* Contenido principal */
+        /* Aquí va la parte principal con toda la información */
         .center {
             position: absolute;
             left: 17.35%;
@@ -156,6 +169,7 @@
             overflow: hidden;
         }
 
+        /* Espacio que uso para acomodar el contenido */
         .content {
             position: relative;
             width: 100%;
@@ -163,7 +177,7 @@
             padding: 2.4% 7.2% 1.2%;
         }
 
-        /* Cinta */
+        /* Cintita verde donde pongo la fecha */
         .ribbon {
             position: relative;
             display: flex;
@@ -179,6 +193,7 @@
             font-weight: 900;
         }
 
+        /* Decoración que va a los lados de la cinta */
         .ribbon::before,
         .ribbon::after {
             content: "";
@@ -203,7 +218,7 @@
             left: 104%;
         }
 
-        /* Título del contenido */
+        /* Nombre del tema que estoy explicando */
         .title {
             margin: 8px 0 10px;
             padding-left: 8%;
@@ -216,7 +231,7 @@
             white-space: nowrap;
         }
 
-        /* Introducción */
+        /* Aquí pongo una pequeña explicación antes de los cuadros */
         .intro {
             width: 57%;
             min-height: 88px;
@@ -230,7 +245,7 @@
             font-weight: 600;
         }
 
-        /* Imagen principal */
+        /* Imagen principal de esta fecha */
         .mainimg {
             position: absolute;
             right: 2.5%;
@@ -243,7 +258,7 @@
             padding: 2px;
         }
 
-        /* Cuadros de información */
+        /* Aquí acomodo los dos cuadros de información */
         .boxes {
             position: absolute;
             left: 7.2%;
@@ -255,6 +270,7 @@
             gap: 4.7%;
         }
 
+        /* Diseño general de los cuadros */
         .box {
             position: relative;
             padding: 40px 26px 14px;
@@ -269,17 +285,19 @@
             font-weight: 500;
         }
 
+        /* Primer cuadro, con fondo verde */
         .box.green {
             background: #dfeee0;
             border: 1px solid #c8ddc9;
         }
 
+        /* Segundo cuadro, con fondo rosita */
         .box.pink {
             background: #fae5e5;
             border: 1px solid #efbcbc;
         }
 
-        /* Etiquetas de los cuadros */
+        /* Nombre que aparece arriba de cada cuadro */
         .label {
             position: absolute;
             left: 8%;
@@ -296,15 +314,17 @@
             font-weight: 900;
         }
 
+        /* Color de la etiqueta del cuadro verde */
         .green .label {
             background: #236b37;
         }
 
+        /* Color de la etiqueta del cuadro rosa */
         .pink .label {
             background: #c92328;
         }
 
-        /* Botón regresar */
+        /* Botón para regresar al inicio */
         .back {
             position: absolute;
             left: 7.2%;
@@ -322,13 +342,14 @@
             font-weight: 900;
         }
 
+        /* Aquí agrego la flecha del botón */
         .back::before {
             content: "←";
             font-size: 19px;
             margin-right: 7px;
         }
 
-        /* Pie de página */
+        /* Parte de abajo donde aparecen mis datos */
         .footer {
             position: absolute;
             left: 0;
@@ -352,14 +373,17 @@
 
 <body>
 
+    <!-- Título general de todas las páginas -->
     <h1 class="page-title">
         SEPTIEMBRE: MES PATRIO
     </h1>
 
     <div class="page">
 
+        <!-- Aquí va la imagen de la parte de arriba -->
         <div class="header"></div>
 
+        <!-- Pestañas para ver las diferentes fechas -->
         <div class="tabs">
             <a class="active" href="fecha13.html">13 DE SEPTIEMBRE</a>
             <a href="fecha15.html">15 DE SEPTIEMBRE</a>
@@ -367,9 +391,11 @@
             <a href="fecha27.html">27 DE SEPTIEMBRE</a>
         </div>
 
+        <!-- Imágenes que puse como decoración -->
         <img class="parrot" src="parrot.png" alt="">
         <img class="dragon" src="dragon.png" alt="">
 
+        <!-- Menú principal de las secciones -->
         <nav class="side">
             <a class="active" href="fechas.html">FECHAS IMPORTANTES</a>
             <a href="personajes.html">PERSONAJES ILUSTRES</a>
@@ -377,26 +403,32 @@
             <a href="mitos.html">MITOS</a>
         </nav>
 
+        <!-- Aquí empieza la información de la fecha -->
         <main class="center">
 
             <div class="content">
 
+                <!-- Aquí muestro qué fecha estoy explicando -->
                 <div class="ribbon">
                     13 DE SEPTIEMBRE
                 </div>
 
+                <!-- Tema principal de esta sección -->
                 <h1 class="title">
                     LOS NIÑOS HÉROES
                 </h1>
 
+                <!-- Pequeña introducción sobre lo que pasó -->
                 <div class="intro">
                     El 13 de septiembre de 1847 ocurrió la defensa del Castillo de Chapultepec durante la intervención estadounidense en México.
                     <br>
                     Se recuerda especialmente a seis cadetes del Colegio Militar, conocidos como los Niños Héroes, quienes participaron en la defensa del castillo.
                 </div>
 
+                <!-- Imagen relacionada con los Niños Héroes -->
                 <img class="mainimg" src="imagen_13_septiembre.jpg" alt="Niños Héroes">
 
+                <!-- Aquí pongo información más específica sobre la fecha -->
                 <div class="boxes">
 
                     <article class="box green">
@@ -417,6 +449,7 @@
 
                 </div>
 
+                <!-- Botón para regresar a la página principal -->
                 <a class="back" href="index.html">
                     REGRESAR AL INICIO
                 </a>
@@ -425,6 +458,7 @@
 
         </main>
 
+        <!-- Mis datos aparecen al final de la página -->
         <footer class="footer">
             RODARTE GONZALEZ CALEB DANIEL<br>
             GRUPO 5ºI<br>
@@ -435,3 +469,4 @@
 
 </body>
 </html>
+```

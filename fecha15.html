@@ -2,16 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Esto hace que la página se adapte a diferentes tamaños de pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Septiembre: Mes Patrio</title>
 
     <style>
+        /* Quito los espacios que aparecen solos para poder acomodar mejor la página */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        /* Hago que ocupe toda la pantalla */
         html,
         body {
             width: 100%;
@@ -19,13 +24,14 @@
             overflow: hidden;
         }
 
+        /* Aquí dejo la configuración general de la página */
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #bdbdbd;
             color: #111;
         }
 
-        /* Página */
+        /* Este es el espacio donde acomodo todo */
         .page {
             position: relative;
             width: 100vw;
@@ -35,7 +41,7 @@
             background: #bdbdbd;
         }
 
-        /* Título principal */
+        /* Título que aparece en la parte de arriba */
         .page-title {
             position: absolute;
             top: 7.5%;
@@ -46,11 +52,13 @@
             font-size: clamp(38px, 5.3vw, 72px);
             font-weight: 900;
             line-height: 1.05;
+
+            /* Le pongo una sombra para que resalte */
             text-shadow: 2px 2px #fff;
             z-index: 10;
         }
 
-        /* Encabezado */
+        /* Imagen que uso como encabezado */
         .header {
             position: absolute;
             top: 0;
@@ -61,7 +69,7 @@
             z-index: 1;
         }
 
-        /* Pestañas de fechas */
+        /* Estas son las pestañas para cambiar de fecha */
         .tabs {
             position: absolute;
             left: 13.65%;
@@ -73,6 +81,7 @@
             z-index: 30;
         }
 
+        /* Así acomodo el texto de cada fecha */
         .tabs a {
             display: flex;
             align-items: center;
@@ -85,12 +94,13 @@
             font-weight: 900;
         }
 
+        /* La fecha en la que estoy queda marcada */
         .tabs a.active,
         .tabs a:hover {
             background: #075b18;
         }
 
-        /* Menú lateral */
+        /* Menú que está del lado izquierdo */
         .side {
             position: absolute;
             top: 44.5%;
@@ -99,6 +109,7 @@
             z-index: 15;
         }
 
+        /* Diseño de los botones del menú */
         .side a {
             display: flex;
             align-items: center;
@@ -115,15 +126,17 @@
             font-weight: 900;
         }
 
+        /* La sección actual se queda en verde oscuro */
         .side a.active {
             background: #075b18;
         }
 
+        /* Cambio de color cuando paso el mouse */
         .side a:hover {
             background: #476f4e;
         }
 
-        /* Imágenes decorativas */
+        /* Imágenes que puse para decorar */
         .parrot {
             position: absolute;
             left: 4.5%;
@@ -144,7 +157,7 @@
             z-index: 16;
         }
 
-        /* Contenido principal */
+        /* Parte principal donde pongo la información */
         .center {
             position: absolute;
             left: 17.35%;
@@ -156,6 +169,7 @@
             overflow: hidden;
         }
 
+        /* Aquí acomodo todo el contenido de la fecha */
         .content {
             position: relative;
             width: 100%;
@@ -163,7 +177,7 @@
             padding: 2.4% 7.2% 1.2%;
         }
 
-        /* Cinta */
+        /* Cinta donde aparece la fecha */
         .ribbon {
             position: relative;
             display: flex;
@@ -179,6 +193,7 @@
             font-weight: 900;
         }
 
+        /* Decoración que va a los lados de la cinta */
         .ribbon::before,
         .ribbon::after {
             content: "";
@@ -203,7 +218,7 @@
             left: 104%;
         }
 
-        /* Título del contenido */
+        /* Aquí pongo el nombre del acontecimiento */
         .title {
             margin: 8px 0 10px;
             padding-left: 8%;
@@ -216,7 +231,7 @@
             white-space: nowrap;
         }
 
-        /* Introducción */
+        /* Este cuadro tiene una pequeña explicación de la fecha */
         .intro {
             width: 57%;
             min-height: 88px;
@@ -230,7 +245,7 @@
             font-weight: 600;
         }
 
-        /* Imagen principal */
+        /* Imagen principal relacionada con el tema */
         .mainimg {
             position: absolute;
             right: 2.5%;
@@ -243,7 +258,7 @@
             padding: 2px;
         }
 
-        /* Cuadros de información */
+        /* Aquí acomodo los dos cuadros de información */
         .boxes {
             position: absolute;
             left: 7.2%;
@@ -255,6 +270,7 @@
             gap: 4.7%;
         }
 
+        /* Diseño general de los cuadros */
         .box {
             position: relative;
             padding: 40px 26px 14px;
@@ -269,17 +285,19 @@
             font-weight: 500;
         }
 
+        /* El primer cuadro tiene fondo verde */
         .box.green {
             background: #dfeee0;
             border: 1px solid #c8ddc9;
         }
 
+        /* El segundo cuadro tiene fondo rosa */
         .box.pink {
             background: #fae5e5;
             border: 1px solid #efbcbc;
         }
 
-        /* Etiquetas */
+        /* Nombre que aparece arriba de cada cuadro */
         .label {
             position: absolute;
             left: 8%;
@@ -296,15 +314,17 @@
             font-weight: 900;
         }
 
+        /* Etiqueta del cuadro verde */
         .green .label {
             background: #236b37;
         }
 
+        /* Etiqueta del cuadro rosa */
         .pink .label {
             background: #c92328;
         }
 
-        /* Botón regresar */
+        /* Botón para volver al inicio */
         .back {
             position: absolute;
             left: 7.2%;
@@ -322,13 +342,14 @@
             font-weight: 900;
         }
 
+        /* Le agrego la flecha al botón */
         .back::before {
             content: "←";
             font-size: 19px;
             margin-right: 7px;
         }
 
-        /* Pie de página */
+        /* Parte de abajo con mis datos */
         .footer {
             position: absolute;
             left: 0;
@@ -352,14 +373,17 @@
 
 <body>
 
+    <!-- Título general de la página -->
     <h1 class="page-title">
         SEPTIEMBRE: MES PATRIO
     </h1>
 
     <div class="page">
 
+        <!-- Imagen que va en la parte de arriba -->
         <div class="header"></div>
 
+        <!-- Aquí puedo cambiar entre las diferentes fechas -->
         <div class="tabs">
             <a href="fecha13.html">13 DE SEPTIEMBRE</a>
             <a class="active" href="fecha15.html">15 DE SEPTIEMBRE</a>
@@ -367,9 +391,11 @@
             <a href="fecha27.html">27 DE SEPTIEMBRE</a>
         </div>
 
+        <!-- Dibujos que sirven para decorar la página -->
         <img class="parrot" src="parrot.png" alt="">
         <img class="dragon" src="dragon.png" alt="">
 
+        <!-- Menú para entrar a las otras secciones -->
         <nav class="side">
             <a class="active" href="fechas.html">FECHAS IMPORTANTES</a>
             <a href="personajes.html">PERSONAJES ILUSTRES</a>
@@ -377,26 +403,32 @@
             <a href="mitos.html">MITOS</a>
         </nav>
 
+        <!-- Aquí empieza la información sobre el 15 de septiembre -->
         <main class="center">
 
             <div class="content">
 
+                <!-- Fecha que estoy mostrando -->
                 <div class="ribbon">
                     15 DE SEPTIEMBRE
                 </div>
 
+                <!-- Nombre del acontecimiento -->
                 <h1 class="title">
                     EL GRITO DE DOLORES
                 </h1>
 
+                <!-- Explicación corta de lo que pasó -->
                 <div class="intro">
                     El 15 de septiembre de 1810 se conmemora el inicio de la lucha por la Independencia de México.
                     <br>
                     La tradición señala que durante la noche, Miguel Hidalgo y Costilla convocó al pueblo de Dolores a levantarse contra el gobierno virreinal.
                 </div>
 
+                <!-- Imagen relacionada con el Grito de Dolores -->
                 <img class="mainimg" src="imagen_15_septiembre.jpg" alt="Grito de Dolores">
 
+                <!-- Aquí pongo dos partes con información más específica -->
                 <div class="boxes">
 
                     <article class="box green">
@@ -421,6 +453,7 @@
 
                 </div>
 
+                <!-- Botón que me lleva otra vez al inicio -->
                 <a class="back" href="index.html">
                     REGRESAR AL INICIO
                 </a>
@@ -429,6 +462,7 @@
 
         </main>
 
+        <!-- Mis datos aparecen en la parte de abajo -->
         <footer class="footer">
             RODARTE GONZALEZ CALEB DANIEL<br>
             GRUPO 5ºI<br>
@@ -439,3 +473,5 @@
 
 </body>
 </html>
+```
+

@@ -1,17 +1,23 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Con esto hago que la página se adapte al tamaño de la pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Septiembre: Mes Patrio</title>
 
     <style>
+        /* Aquí reinicio los espacios para que no se mueva nada por defecto */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        /* La página ocupa toda la pantalla */
         html,
         body {
             width: 100%;
@@ -19,13 +25,14 @@
             overflow: hidden;
         }
 
+        /* Configuración general de la página */
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #bdbdbd;
             color: #111;
         }
 
-        /* Página */
+        /* Este es el espacio donde va todo lo demás */
         .page {
             position: relative;
             width: 100vw;
@@ -35,7 +42,7 @@
             background: #bdbdbd;
         }
 
-        /* Título principal */
+        /* Aquí pongo el título grande de la página */
         .page-title {
             position: absolute;
             top: 7.5%;
@@ -46,11 +53,13 @@
             font-size: clamp(38px, 5.3vw, 72px);
             font-weight: 900;
             line-height: 1.05;
+
+            /* La sombra hace que el título se note más con el fondo */
             text-shadow: 2px 2px #fff;
             z-index: 10;
         }
 
-        /* Encabezado */
+        /* Esta imagen es la parte de arriba de la página */
         .header {
             position: absolute;
             top: 0;
@@ -61,7 +70,7 @@
             z-index: 1;
         }
 
-        /* Menú lateral */
+        /* Aquí acomodo las opciones del menú */
         .side {
             position: absolute;
             top: 44.5%;
@@ -70,6 +79,7 @@
             z-index: 15;
         }
 
+        /* Diseño de cada botón del menú */
         .side a {
             display: flex;
             align-items: center;
@@ -89,15 +99,17 @@
             font-weight: 900;
         }
 
+        /* Este es el color del botón que está seleccionado */
         .side a.active {
             background: #075b18;
         }
 
+        /* Al pasar el mouse cambia un poco el color */
         .side a:hover {
             background: #476f4e;
         }
 
-        /* Imágenes decorativas */
+        /* Estas son las imágenes que puse solo como decoración */
         .parrot {
             position: absolute;
             left: 4.5%;
@@ -118,7 +130,7 @@
             z-index: 16;
         }
 
-        /* Contenedor central */
+        /* Esta parte es donde va la información */
         .center {
             position: absolute;
             left: 17.35%;
@@ -131,6 +143,7 @@
             overflow: hidden;
         }
 
+        /* Dentro de este espacio acomodo las tarjetas y el título */
         .content {
             position: relative;
             width: 100%;
@@ -138,7 +151,7 @@
             padding: 2.4% 7.2% 1.2%;
         }
 
-        /* Cinta */
+        /* Esta es la cintita verde que está arriba */
         .ribbon {
             position: relative;
             display: flex;
@@ -157,6 +170,7 @@
             font-weight: 900;
         }
 
+        /* Estas dos partes hacen que la cinta tenga decoración a los lados */
         .ribbon::before,
         .ribbon::after {
             content: "";
@@ -182,7 +196,7 @@
             left: 104%;
         }
 
-        /* Título del contenido */
+        /* Título que aparece dentro de la parte blanca */
         .title {
             margin: 8px 0 10px;
             padding-left: 8%;
@@ -196,7 +210,7 @@
             white-space: nowrap;
         }
 
-        /* Tarjetas */
+        /* Aquí acomodo las 4 tarjetas en dos filas */
         .cards4 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -204,6 +218,7 @@
             margin-top: 12px;
         }
 
+        /* Diseño de cada tarjeta de información */
         .info-card {
             position: relative;
             display: grid;
@@ -217,6 +232,7 @@
             overflow: hidden;
         }
 
+        /* Ajusto las imágenes para que queden dentro de las tarjetas */
         .info-card img {
             width: 100%;
             height: 112px;
@@ -226,12 +242,14 @@
             display: block;
         }
 
+        /* Espacio y tamaño del texto de las tarjetas */
         .info-card .txt {
             padding: 11px 13px;
             font-size: clamp(8.5px, 0.78vw, 12px);
             line-height: 1.28;
         }
 
+        /* Los nombres de cada dato van un poco más grandes y verdes */
         .info-card b {
             display: block;
             margin-bottom: 5px;
@@ -240,7 +258,7 @@
             font-size: clamp(10px, 0.88vw, 14px);
         }
 
-        /* Botón regresar */
+        /* Botón para volver a la página principal */
         .back {
             position: absolute;
             left: 7.2%;
@@ -262,13 +280,14 @@
             font-weight: 900;
         }
 
+        /* Aquí le agrego la flecha al botón */
         .back::before {
             content: "←";
             margin-right: 7px;
             font-size: 19px;
         }
 
-        /* Pie de página */
+        /* Esta es la parte de abajo con mis datos */
         .footer {
             position: absolute;
             left: 0;
@@ -297,20 +316,21 @@
 
 <body>
 
+    <!-- Nombre de la página -->
     <h1 class="page-title">
         SEPTIEMBRE: MES PATRIO
     </h1>
 
     <div class="page">
 
-        <!-- Encabezado -->
+        <!-- Imagen que va en la parte de arriba -->
         <div class="header"></div>
 
-        <!-- Imágenes decorativas -->
+        <!-- Dibujos que puse para que la página se vea más decorada -->
         <img class="parrot" src="parrot.png" alt="">
         <img class="dragon" src="dragon.png" alt="">
 
-        <!-- Menú -->
+        <!-- Aquí están las diferentes secciones de la página -->
         <nav class="side">
             <a href="fechas.html">FECHAS IMPORTANTES</a>
             <a href="personajes.html">PERSONAJES ILUSTRES</a>
@@ -318,11 +338,12 @@
             <a href="mitos.html">MITOS</a>
         </nav>
 
-        <!-- Contenido principal -->
+        <!-- Parte donde muestro los datos curiosos -->
         <main class="center">
 
             <div class="content">
 
+                <!-- Cinta que identifica la sección -->
                 <div class="ribbon">
                     DATOS CURIOSOS
                 </div>
@@ -331,6 +352,7 @@
                     DATOS CURIOSOS
                 </h1>
 
+                <!-- Aquí empiezan las tarjetas con la información -->
                 <div class="cards4">
 
                     <article class="info-card">
@@ -377,6 +399,7 @@
 
                 </div>
 
+                <!-- Con este botón puedo regresar al inicio -->
                 <a class="back" href="index.html">
                     REGRESAR AL INICIO
                 </a>
@@ -385,7 +408,7 @@
 
         </main>
 
-        <!-- Pie de página -->
+        <!-- Aquí pongo mis datos al final de la página -->
         <footer class="footer">
             RODARTE GONZALEZ CALEB DANIEL<br>
             GRUPO 5ºI<br>
@@ -396,3 +419,4 @@
 
 </body>
 </html>
+```

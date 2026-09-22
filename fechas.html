@@ -1,28 +1,35 @@
+<!-- Aqui configuro que el documento sea HTML5 y que la pagina este en español -->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+<!-- Aqui pongo la informacion basica de la pagina y el titulo que aparece en la pestaña -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Septiembre: Mes Patrio</title>
 
 <style>
+/* Aqui quito los espacios que pone el navegador por defecto */
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
+/* Aqui hago que la pagina ocupe toda la pantalla y no tenga barras de desplazamiento */
 html,body{
     width:100%;
     height:100%;
     overflow:hidden;
 }
 
+/* Aqui pongo la letra general y el color de fondo */
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:#bdbdbd;
 }
 
+/* Aqui creo el espacio principal donde acomodo todo el contenido */
 .page{
     position:relative;
     width:100vw;
@@ -31,6 +38,7 @@ body{
     overflow:hidden;
 }
 
+/* Aqui acomodo y diseño el titulo principal de la pagina */
 .page-title{
     position:absolute;
     top:7.5%;
@@ -43,6 +51,7 @@ body{
     z-index:10;
 }
 
+/* Aqui pongo la imagen que uso como encabezado */
 .header{
     position:absolute;
     top:0;
@@ -52,6 +61,7 @@ body{
     background:url("header.png") center/100% 100% no-repeat;
 }
 
+/* Aqui acomodo las cuatro pestañas de las fechas */
 .tabs{
     position:absolute;
     left:13.65%;
@@ -63,6 +73,7 @@ body{
     z-index:20;
 }
 
+/* Aqui le doy forma y color a los botones de las fechas */
 .tabs a{
     display:flex;
     align-items:center;
@@ -75,11 +86,13 @@ body{
     font-weight:900;
 }
 
+/* Aqui hago que la fecha seleccionada cambie de color */
 .tabs a.active,
 .tabs a:hover{
     background:#075b18;
 }
 
+/* Aqui acomodo el menu que aparece del lado izquierdo */
 .side{
     position:absolute;
     left:0;
@@ -88,6 +101,7 @@ body{
     z-index:15;
 }
 
+/* Aqui diseño cada opcion del menu lateral */
 .side a{
     display:flex;
     align-items:center;
@@ -104,14 +118,17 @@ body{
     font-weight:900;
 }
 
+/* Aqui marco la opcion que esta seleccionada */
 .side a.active{
     background:#075b18;
 }
 
+/* Aqui cambio el color de las opciones cuando paso el mouse */
 .side a:hover{
     background:#476f4e;
 }
 
+/* Aqui acomodo el loro que use como decoracion */
 .parrot{
     position:absolute;
     left:4.5%;
@@ -122,6 +139,7 @@ body{
     z-index:16;
 }
 
+/* Aqui acomodo el dragon que use como decoracion */
 .dragon{
     position:absolute;
     right:-.1%;
@@ -132,6 +150,7 @@ body{
     z-index:16;
 }
 
+/* Aqui creo el cuadro blanco donde va la informacion principal */
 .center{
     position:absolute;
     left:17.35%;
@@ -143,6 +162,7 @@ body{
     overflow:hidden;
 }
 
+/* Aqui acomodo todo lo que va dentro del cuadro principal */
 .content{
     position:relative;
     width:100%;
@@ -150,6 +170,7 @@ body{
     padding:2.4% 7.2% 1.2%;
 }
 
+/* Aqui hago la cinta verde donde aparece la fecha */
 .ribbon{
     display:flex;
     align-items:center;
@@ -164,6 +185,7 @@ body{
     font-weight:900;
 }
 
+/* Aqui diseño el titulo del tema */
 .title{
     margin:8px 0 10px;
     padding-left:8%;
@@ -174,6 +196,7 @@ body{
     white-space:nowrap;
 }
 
+/* Aqui hago el cuadro donde escribo la introduccion */
 .intro{
     width:57%;
     min-height:88px;
@@ -187,6 +210,7 @@ body{
     font-weight:600;
 }
 
+/* Aqui acomodo la imagen principal del tema */
 .mainimg{
     position:absolute;
     right:2.5%;
@@ -199,6 +223,7 @@ body{
     padding:2px;
 }
 
+/* Aqui acomodo los dos cuadros de informacion */
 .boxes{
     position:absolute;
     left:7.2%;
@@ -210,6 +235,7 @@ body{
     gap:4.7%;
 }
 
+/* Aqui doy el formato general a los cuadros */
 .box{
     position:relative;
     padding:40px 26px 14px;
@@ -223,16 +249,19 @@ body{
     line-height:1.45;
 }
 
+/* Aqui pongo el color verde al primer cuadro */
 .green{
     background:#dfeee0;
     border:1px solid #c8ddc9;
 }
 
+/* Aqui pongo el color rosa al segundo cuadro */
 .pink{
     background:#fae5e5;
     border:1px solid #efbcbc;
 }
 
+/* Aqui diseño las etiquetas que van arriba de los cuadros */
 .label{
     position:absolute;
     left:8%;
@@ -249,14 +278,17 @@ body{
     font-weight:900;
 }
 
+/* Aqui pongo la etiqueta del primer cuadro en verde */
 .green .label{
     background:#236b37;
 }
 
+/* Aqui pongo la etiqueta del segundo cuadro en rojo */
 .pink .label{
     background:#c92328;
 }
 
+/* Aqui diseño el boton para regresar al inicio */
 .back{
     position:absolute;
     left:7.2%;
@@ -274,12 +306,14 @@ body{
     font-weight:900;
 }
 
+/* Aqui agrego la flecha que aparece en el boton */
 .back:before{
     content:"←";
     font-size:19px;
     margin-right:7px;
 }
 
+/* Aqui diseño el pie de pagina donde puse mis datos */
 .footer{
     position:absolute;
     left:0;
@@ -303,12 +337,15 @@ body{
 
 <body>
 
+<!-- Aqui pongo el titulo principal de mi pagina -->
 <h1 class="page-title">SEPTIEMBRE: MES PATRIO</h1>
 
 <div class="page">
 
+    <!-- Aqui pongo el encabezado con la imagen -->
     <div class="header"></div>
 
+    <!-- Aqui puse las fechas para poder entrar a cada pagina -->
     <div class="tabs">
         <a class="active" href="fecha13.html">13 DE SEPTIEMBRE</a>
         <a href="fecha15.html">15 DE SEPTIEMBRE</a>
@@ -316,9 +353,11 @@ body{
         <a href="fecha27.html">27 DE SEPTIEMBRE</a>
     </div>
 
+    <!-- Aqui puse las imagenes que use como decoracion -->
     <img class="parrot" src="parrot.png">
     <img class="dragon" src="dragon.png">
 
+    <!-- Aqui hice el menu para entrar a las diferentes secciones -->
     <nav class="side">
         <a class="active" href="fechas.html">FECHAS IMPORTANTES</a>
         <a href="personajes.html">PERSONAJES ILUSTRES</a>
@@ -326,14 +365,18 @@ body{
         <a href="mitos.html">MITOS</a>
     </nav>
 
+    <!-- Aqui empieza la parte principal de la pagina -->
     <main class="center">
 
         <div class="content">
 
+            <!-- Aqui puse la fecha que estoy explicando -->
             <div class="ribbon">13 DE SEPTIEMBRE</div>
 
+            <!-- Aqui puse el titulo del tema -->
             <h1 class="title">LOS NIÑOS HÉROES</h1>
 
+            <!-- Aqui escribi una pequeña explicacion sobre el tema -->
             <div class="intro">
                 El 13 de septiembre de 1847 ocurrió la defensa del
                 Castillo de Chapultepec durante la intervención
@@ -344,14 +387,17 @@ body{
                 participaron en la defensa del castillo.
             </div>
 
+            <!-- Aqui puse la imagen relacionada con el tema -->
             <img
                 class="mainimg"
                 src="imagen_13_septiembre.jpg"
                 alt="Niños Héroes"
             >
 
+            <!-- Aqui hice los dos cuadros para poner mas informacion -->
             <div class="boxes">
 
+                <!-- Aqui explico que ocurrio en esta fecha -->
                 <article class="box green">
                     <div class="label">¿QUÉ OCURRIÓ?</div>
                     Las fuerzas estadounidenses atacaron el Castillo
@@ -361,6 +407,7 @@ body{
                     tropas invasoras.
                 </article>
 
+                <!-- Aqui explico por que se conmemora esta fecha -->
                 <article class="box pink">
                     <div class="label">¿POR QUÉ SE CONMEMORA?</div>
                     Esta fecha representa el valor y la defensa
@@ -370,6 +417,7 @@ body{
 
             </div>
 
+            <!-- Aqui puse el boton para regresar al inicio -->
             <a class="back" href="index.html">
                 REGRESAR AL INICIO
             </a>
@@ -378,6 +426,7 @@ body{
 
     </main>
 
+    <!-- Aqui puse mis datos en el pie de pagina: mi nombre, mi grupo y mi numero de control -->
     <footer class="footer">
         RODARTE GONZALEZ CALEB DANIEL<br>
         GRUPO 5ºI<br>

@@ -2,14 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    
+    <!-- Esto sirve para que la página se adapte a celulares y computadoras -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Septiembre: Mes Patrio</title>
 
     <style>
+
+        /* Aquí hago que los tamaños de los elementos no se salgan de su lugar */
         * {
             box-sizing: border-box;
         }
 
+        /* Le quito los espacios que trae la página por defecto */
         html,
         body {
             margin: 0;
@@ -18,19 +24,22 @@
             overflow: hidden;
         }
 
+        /* Pongo la letra que voy a usar en toda la página */
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* Fondo principal */
+        /* Esta es la parte principal donde va todo el contenido */
         .index {
             width: 100vw;
             height: 100vh;
             position: relative;
+
+            /* Aquí pongo la imagen que usaré como fondo */
             background: url("fondo_index.png") center / 100% 100% no-repeat;
         }
 
-        /* Título */
+        /* Aquí acomodo el título en la parte de arriba */
         .index-title {
             position: absolute;
             top: 7.5%;
@@ -42,10 +51,11 @@
             font-weight: 900;
             line-height: 1.05;
 
+            /* Le pongo una sombra blanca para que se pueda leer mejor */
             text-shadow: 2px 2px #fff;
         }
 
-        /* Menú lateral */
+        /* Este es el menú que aparece en el lado izquierdo */
         .side {
             position: absolute;
             top: 51%;
@@ -54,6 +64,7 @@
             z-index: 5;
         }
 
+        /* Con esto le doy forma a cada botón del menú */
         .side a {
             display: flex;
             align-items: center;
@@ -73,12 +84,13 @@
             font-weight: 900;
         }
 
+        /* Cuando paso el mouse por encima cambia el color */
         .side a:hover,
         .side a:active {
             background: #075b18;
         }
 
-        /* Pie de página */
+        /* Esta es la parte de abajo donde pongo mis datos */
         .foot {
             position: absolute;
             bottom: 0;
@@ -87,6 +99,7 @@
             width: 100%;
             height: 10%;
 
+            /* Esto ayuda a poner el texto centrado */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -104,12 +117,15 @@
 
 <body>
 
+    <!-- Aquí empieza todo lo que se va a ver en la página -->
     <main class="index">
 
+        <!-- Este es el título principal de mi página -->
         <h1 class="index-title">
             SEPTIEMBRE: MES PATRIO
         </h1>
 
+        <!-- Aquí están las opciones para entrar a las diferentes secciones -->
         <nav class="side">
             <a href="fechas.html">FECHAS IMPORTANTES</a>
             <a href="personajes.html">PERSONAJES ILUSTRES</a>
@@ -117,6 +133,7 @@
             <a href="mitos.html">MITOS</a>
         </nav>
 
+        <!-- Aquí aparecen mis datos al final de la página -->
         <footer class="foot">
             RODARTE GONZALEZ CALEB DANIEL<br>
             GRUPO 5ºI<br>
@@ -127,4 +144,3 @@
 
 </body>
 </html>
-```

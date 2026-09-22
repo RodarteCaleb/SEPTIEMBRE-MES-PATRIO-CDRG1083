@@ -1,15 +1,34 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Septiembre: Mes Patrio</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{width:100%;height:100%;overflow:hidden}
-body{font-family:Arial;background:#bdbdbd}
 
+/* Ajustes generales para que no queden espacios raros */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden
+}
+
+/* Tipo de letra y color del fondo */
+body{
+    font-family:Arial;
+    background:#bdbdbd
+}
+
+/* Aquí está toda la página */
 .page{
     position:relative;
     width:100vw;
@@ -18,6 +37,7 @@ body{font-family:Arial;background:#bdbdbd}
     overflow:hidden;
 }
 
+/* Título que aparece arriba */
 .page-title{
     position:absolute;
     top:7.5%;
@@ -25,10 +45,13 @@ body{font-family:Arial;background:#bdbdbd}
     text-align:center;
     font-size:clamp(38px,5.3vw,72px);
     font-weight:900;
+
+    /* Le puse sombra para que se vea mejor */
     text-shadow:2px 2px #fff;
     z-index:10;
 }
 
+/* Imagen que va en la parte de arriba */
 .header{
     position:absolute;
     width:100%;
@@ -36,6 +59,7 @@ body{font-family:Arial;background:#bdbdbd}
     background:url("header.png") center/100% 100% no-repeat;
 }
 
+/* Las pestañas de las diferentes fechas */
 .tabs{
     position:absolute;
     left:13.65%;
@@ -47,6 +71,7 @@ body{font-family:Arial;background:#bdbdbd}
     z-index:30;
 }
 
+/* Diseño de cada fecha */
 .tabs a{
     display:flex;
     align-items:center;
@@ -59,9 +84,13 @@ body{font-family:Arial;background:#bdbdbd}
     font-weight:900;
 }
 
+/* La fecha seleccionada cambia a verde */
 .tabs a.active,
-.tabs a:hover{background:#075b18}
+.tabs a:hover{
+    background:#075b18
+}
 
+/* Menú que está del lado izquierdo */
 .side{
     position:absolute;
     left:0;
@@ -70,6 +99,7 @@ body{font-family:Arial;background:#bdbdbd}
     z-index:15;
 }
 
+/* Botones del menú */
 .side a{
     display:flex;
     align-items:center;
@@ -85,9 +115,17 @@ body{font-family:Arial;background:#bdbdbd}
     font-weight:900;
 }
 
-.side a.active{background:#075b18}
-.side a:hover{background:#476f4e}
+/* Se marca la sección en la que estamos */
+.side a.active{
+    background:#075b18
+}
 
+/* Cambio de color al pasar el mouse */
+.side a:hover{
+    background:#476f4e
+}
+
+/* Imagen del loro */
 .parrot{
     position:absolute;
     left:4.5%;
@@ -98,6 +136,7 @@ body{font-family:Arial;background:#bdbdbd}
     z-index:16;
 }
 
+/* Imagen del dragón */
 .dragon{
     position:absolute;
     right:-.1%;
@@ -108,6 +147,7 @@ body{font-family:Arial;background:#bdbdbd}
     z-index:16;
 }
 
+/* Cuadro blanco donde va la información */
 .center{
     position:absolute;
     left:17.35%;
@@ -119,6 +159,7 @@ body{font-family:Arial;background:#bdbdbd}
     overflow:hidden;
 }
 
+/* Espacio donde acomodo el contenido */
 .content{
     position:relative;
     width:100%;
@@ -126,6 +167,7 @@ body{font-family:Arial;background:#bdbdbd}
     padding:2.4% 7.2% 1.2%;
 }
 
+/* Cinta verde con la fecha */
 .ribbon{
     display:flex;
     align-items:center;
@@ -140,6 +182,7 @@ body{font-family:Arial;background:#bdbdbd}
     font-weight:900;
 }
 
+/* Título de la información */
 .title{
     margin:8px 0 10px;
     padding-left:8%;
@@ -149,6 +192,7 @@ body{font-family:Arial;background:#bdbdbd}
     white-space:nowrap;
 }
 
+/* Cuadro donde escribí la introducción */
 .intro{
     width:57%;
     min-height:88px;
@@ -161,6 +205,7 @@ body{font-family:Arial;background:#bdbdbd}
     font-weight:600;
 }
 
+/* Imagen principal de esta fecha */
 .mainimg{
     position:absolute;
     right:2.5%;
@@ -173,6 +218,7 @@ body{font-family:Arial;background:#bdbdbd}
     padding:2px;
 }
 
+/* Aquí acomodo los dos cuadros de abajo */
 .boxes{
     position:absolute;
     left:7.2%;
@@ -184,6 +230,7 @@ body{font-family:Arial;background:#bdbdbd}
     gap:4.7%;
 }
 
+/* Diseño general de los cuadros */
 .box{
     position:relative;
     padding:40px 26px 14px;
@@ -196,16 +243,19 @@ body{font-family:Arial;background:#bdbdbd}
     line-height:1.45;
 }
 
+/* Cuadro verde */
 .green{
     background:#dfeee0;
     border:1px solid #c8ddc9;
 }
 
+/* Cuadro rosa */
 .pink{
     background:#fae5e5;
     border:1px solid #efbcbc;
 }
 
+/* Texto de arriba de cada cuadro */
 .label{
     position:absolute;
     left:8%;
@@ -222,9 +272,17 @@ body{font-family:Arial;background:#bdbdbd}
     font-weight:900;
 }
 
-.green .label{background:#236b37}
-.pink .label{background:#c92328}
+/* Color de la etiqueta verde */
+.green .label{
+    background:#236b37
+}
 
+/* Color de la etiqueta rosa */
+.pink .label{
+    background:#c92328
+}
+
+/* Botón para regresar al inicio */
 .back{
     position:absolute;
     left:7.2%;
@@ -242,45 +300,35 @@ body{font-family:Arial;background:#bdbdbd}
     font-weight:900;
 }
 
-.footer{
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:10%;
-    min-height:58px;
-    background:#ef0505;
-    color:white;
-    z-index:40;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    font-size:clamp(13px,1.28vw,20px);
-    font-weight:900;
-    line-height:1.35;
-}
+/* Título principal de la página */
 </style>
 </head>
 
 <body>
 
+<!-- Nombre general de la página -->
 <h1 class="page-title">SEPTIEMBRE: MES PATRIO</h1>
 
 <div class="page">
 
+    <!-- Imagen de la parte superior -->
     <div class="header"></div>
 
+    <!-- Aquí están los botones para cambiar de fecha -->
     <div class="tabs">
         <a href="fecha13.html">13 DE SEPTIEMBRE</a>
         <a href="fecha15.html">15 DE SEPTIEMBRE</a>
         <a href="fecha16.html">16 DE SEPTIEMBRE</a>
+
+        <!-- Esta es la fecha que estamos viendo -->
         <a class="active" href="fecha27.html">27 DE SEPTIEMBRE</a>
     </div>
 
+    <!-- Imágenes decorativas -->
     <img class="parrot" src="parrot.png">
     <img class="dragon" src="dragon.png">
 
+    <!-- Menú principal -->
     <nav class="side">
         <a class="active" href="fechas.html">FECHAS IMPORTANTES</a>
         <a href="personajes.html">PERSONAJES ILUSTRES</a>
@@ -288,14 +336,18 @@ body{font-family:Arial;background:#bdbdbd}
         <a href="mitos.html">MITOS</a>
     </nav>
 
+    <!-- Parte donde va toda la información -->
     <main class="center">
 
         <div class="content">
 
+            <!-- Fecha que se está explicando -->
             <div class="ribbon">27 DE SEPTIEMBRE</div>
 
+            <!-- Título de esta fecha -->
             <h1 class="title">CONSUMACIÓN DE LA INDEPENDENCIA</h1>
 
+            <!-- Pequeña explicación del tema -->
             <div class="intro">
                 El 27 de septiembre de 1821 se consumó la Independencia de México.
                 Ese día, el Ejército Trigarante, dirigido por Agustín de Iturbide,
@@ -305,18 +357,24 @@ body{font-family:Arial;background:#bdbdbd}
                 El Ejército Trigarante entró a la Ciudad de México el 27 de septiembre de 1821.
             </div>
 
+            <!-- Imagen relacionada con el tema -->
             <img class="mainimg" src="imagen_27_septiembre.jpg">
 
+            <!-- Información dividida en dos cuadros -->
             <div class="boxes">
 
+                <!-- Primer cuadro -->
                 <article class="box green">
                     <div class="label">¿QUÉ OCURRIÓ?</div>
+
                     El Ejército Trigarante entró a la Ciudad de México
                     el 27 de septiembre de 1821.
                 </article>
 
+                <!-- Segundo cuadro -->
                 <article class="box pink">
                     <div class="label">¿POR QUÉ ES IMPORTANTE?</div>
+
                     Esta fecha representa la consumación de la
                     Independencia de México y el final de una larga
                     lucha iniciada en 1810.
@@ -324,6 +382,7 @@ body{font-family:Arial;background:#bdbdbd}
 
             </div>
 
+            <!-- Regresar a la página principal -->
             <a class="back" href="index.html">
                 ← REGRESAR AL INICIO
             </a>
@@ -332,6 +391,7 @@ body{font-family:Arial;background:#bdbdbd}
 
     </main>
 
+    <!-- Parte de abajo con mis datos -->
     <footer class="footer">
         RODARTE GONZALEZ CALEB DANIEL<br>
         GRUPO 5ºI<br>
@@ -342,3 +402,4 @@ body{font-family:Arial;background:#bdbdbd}
 
 </body>
 </html>
+```
